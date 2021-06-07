@@ -1,5 +1,8 @@
-name: App CI
-on: [push, pull_request]
+name: Node CI
+on:
+  pull_request:
+    paths-ignore:
+      - 'angular-app/**'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,13 +13,5 @@ jobs:
             node-version: 14
         - run: yarn install
         - run: yarn start
-
-  build-ionic:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: cd angular-app
-      - run: yarn install
-      - run: yarn start
 
 
