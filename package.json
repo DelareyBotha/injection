@@ -5,12 +5,15 @@
   "author": "Delarey Botha",
   "license": "MIT",
   "scripts": {
-    "install:frontend": "cd angular-app && yarn install",
-    "start:server": "tsc && node dist/index.js",
+    "build:frontend": "cd angular-app && yarn install && yarn build",
     "start:frontend": "cd angular-app && yarn start",
-    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-mode' src/index.ts",
-    "test": "echo 'no test function implemented yet'",
-    "build": ""
+    "test:frontend": "cd angular-app && yarn test",
+
+    "build:server": "yarn install",
+    "start:server": "tsc && node dist/index.js",
+    "test:server": "echo 'no test function implemented yet'",
+
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-mode' src/index.ts"
   },
   "devDependencies": {
     "jest": "^27.0.4",

@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: yarn run install:frontend
-      - run: yarn run start:frontend
+      - run: yarn run build:frontend
+      - run: yarn run test:frontend
 
 
