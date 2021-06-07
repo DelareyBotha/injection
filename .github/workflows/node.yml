@@ -9,7 +9,6 @@ jobs:
           with:
             node-version: 14
         - name: yarn install, build and test
-        - run: |
-         yarn install
-         yarn start
+        - run: yarn install
+        - run: yarn start
 
