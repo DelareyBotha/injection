@@ -1,4 +1,4 @@
-name: Node CI
+name: App CI
 on: [push, pull_request]
 jobs:
   build:
@@ -10,4 +10,13 @@ jobs:
             node-version: 14
         - run: yarn install
         - run: yarn start
+
+  build-ionic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd angular-app
+      - run: yarn install
+      - run: yarn start
+
 
