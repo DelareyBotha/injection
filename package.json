@@ -5,7 +5,9 @@
   "author": "Delarey Botha",
   "license": "MIT",
   "scripts": {
-    "start": "tsc && node dist/index.js",
+    "install:frontend": "cd angular-app && yarn install",
+    "start:server": "tsc && node dist/index.js",
+    "start:frontend": "cd angular-app && yarn start",
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-mode' src/index.ts",
     "test": "echo 'no test function implemented yet'",
     "build": ""
