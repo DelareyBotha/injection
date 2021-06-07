@@ -106,3 +106,7 @@ dist
 #Typescript
 
 dist/
+
+.idea
+
+.vscode
