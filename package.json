@@ -8,19 +8,19 @@
     "build:frontend": "cd angular-app && yarn install && yarn build",
     "start:frontend": "cd angular-app && yarn start",
     "test:frontend": "cd angular-app && yarn test",
-
     "build:server": "yarn install",
     "start:server": "tsc && node dist/index.js",
     "test:server": "echo 'no test function implemented yet'",
-
-    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-mode' src/index.ts"
+    "dev": "tsc-watch --onSuccess \"node dist/index.js\""
   },
   "devDependencies": {
     "jest": "^27.0.4",
     "nodemon": "^2.0.7",
+    "tsc-watch": "^4.4.0",
     "typescript": "^4.3.2"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   }
 }
