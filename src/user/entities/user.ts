@@ -1,16 +1,15 @@
 class User {
-    private _name: string;
-    private _surname: string;
-    private _password: string;
-    private _email: string;
+    constructor(
+        private readonly _id: string,
+        private _name: string,
+        private _surname: string,
+        private _password: string,
+        private _email: string
+    ) {}
 
-    constructor(user: User) {
-        this._name = user.name;
-        this._surname = user.surname;
-        this._password = user.password;
-        this._email = user.email;
+    get id(): string {
+        return this._id;
     }
-
     get name(): string {
         return this._name;
     }
